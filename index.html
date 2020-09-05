@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess the number</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<style>
+  input {
+    margin: 5px;
+    padding: 5px;
+  }
+
+  .custominput {
+    width: 50px;
+    height: 30px;
+  }
+
+  .alert {
+    display: none;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  input:focus {
+    outline: none;
+  }
+</style>
+
+<body>
+  <div class="container border border-secondary rounded-lg mt-4 p-4">
+    <div class="column mx-auto">
+      <h2 class="heading">Can you Guess the Hidden Number ?</h2>
+      <p style="margin: 0; padding:0;">Hidden Number is range/betn <span class="min"></span> and <span
+          class="max"></span>
+        <span class="chanceleft"></span></p>
+
+      <div class="gamebox">
+        <input type="number" id="guessinput" placeholder="Enter the number">
+        <input type="submit" id="guessbtn" value="Submit">
+        <div class="alert alert-success message" role="alert"></div>
+        <div class="alert alert-danger message" role="alert"></div>
+        <hr>
+        <div class="container">
+          <h6>----- Instructions/info -----</h6>
+          <p>1) here is hidden number inside the system.</p>
+          <p>2) Hidden number is in between the range mention above.</p>
+          <p>3) You need to guess the hidden number from the range.</p>
+          <p>4) Only <span class="chanceleft">3 </span> chances.</p>
+          <p>Try your luck</p>
+        </div>
+        <hr>
+        <div class="container customize">
+          <h6>----- Customize section ----- !!! (will be ready soon ...)</h6>
+          <p>You can put your own range and try:
+          <p>
+            <label for="firstnum">Range min</label>
+            <input type="number" id="firstnum" class="custominput rounded-lg">
+            <label for="secondnum">max</label>
+            <input type="number" id="secondnum" class="custominput rounded-lg" ><br>
+            <label for="customchance">How many chances you want?</label>
+            <input type="number" class="custominput rounded-lg" id="customchance">    
+            <input type="submit" id="customsubmit" value="submit" > 
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+  <!-- bootstrap javascript links -->
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
