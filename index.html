@@ -37,9 +37,10 @@
 
 <body>
   <div class="container border border-secondary rounded-lg mt-4 p-4">
-    <div class="column mx-auto">
+    <div class="column mx-auto forcustompage">
+      <h4 class="customheading"></h4>
       <h2 class="heading">Can you Guess the Hidden Number ?</h2>
-      <p style="margin: 0; padding:0;">Hidden Number is range/betn <span class="min"></span> and <span
+      <p style="margin: 0; padding:0;">Hidden Number is in range/betn <span class="min"></span> and <span
           class="max"></span>
         <span class="chanceleft"></span></p>
 
@@ -51,16 +52,18 @@
         <hr>
         <div class="container">
           <h6>----- Instructions/info -----</h6>
-          <p>1) here is hidden number inside the system.</p>
+          <p>1) There is hidden number inside the system.</p>
           <p>2) Hidden number is in between the range mention above.</p>
           <p>3) You need to guess the hidden number from the range.</p>
-          <p>4) Only <span class="chanceleft">3 </span> chances.</p>
+          <p>4) Only <span class="chanceleftT">3 </span> chances.</p>
           <p>Try your luck</p>
         </div>
+        <p>for custom input:<button style="margin-left: 5px;" onclick="guestmode()">click here</button> </p>
         <hr>
-        <div class="container customize">
-          <h6>----- Customize section ----- !!! (will be ready soon ...)</h6>
-          <p>You can put your own range and try:
+        <div class="container customize" style="display: none;">
+          <p style="color: red; margin-bottom: 5px;">(Note: This section is for your custom input)</p>
+          <h6>---Guest Mode/Customize section---</h6>
+          <p>For custom input
           <p>
             <label for="firstnum">Range min</label>
             <input type="number" id="firstnum" class="custominput rounded-lg">
@@ -69,6 +72,8 @@
             <label for="customchance">How many chances you want?</label>
             <input type="number" class="custominput rounded-lg" id="customchance">    
             <input type="submit" id="customsubmit" value="submit" > 
+            <div class="alert alert-success message" role="alert"></div>
+            <div class="alert alert-danger message" role="alert"></div>
         </div>
 
       </div>
